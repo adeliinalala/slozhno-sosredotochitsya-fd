@@ -2,7 +2,14 @@
   --page-bg-image: url("../images/cover-image-dark.png");
   --accent-color: #FF0070;
   --title-color: #DB00FF;
+  --menu-color: #FF0070;
+  --border-color: #FF0070;
+  --hover-color: rgba(255, 0, 112, 0.4);
+  --active-color: rgba(255, 0, 112, 1);
   --text-color: #F1B2CE;
+  --subtitle-color:#000028;
+  --section-title-color: #FF0070;
+  --background-color: #000028;
 }
 
 .theme-dark .rec {
