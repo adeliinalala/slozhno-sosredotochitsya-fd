@@ -1,6 +1,6 @@
 .page {
   background-image: var(--page-bg-image);
-  background-color: #000028;
+  background-color: var(--background-color);
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -10,7 +10,8 @@
 .header {
   height: 100vh;
   min-height: 768px;
-  padding: 20px;
+  padding-left: 0;
+  padding-right: 20px;
   position: relative;
   display: grid;
   grid-template-rows: 1fr auto 1fr;
@@ -45,12 +46,15 @@
 
 .header__theme-menu-list {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   list-style: none;
+  padding-top: 20px;
+  padding-left: 30px;
 }
 
 .header__theme-menu-button {
   text-transform: lowercase;
+  line-height: 18px;
   color: var(--menu-color);
   border: none;
   background-color: transparent;
@@ -72,6 +76,8 @@
 .header__theme-menu-button_active {
   outline: 1px solid var(--active-color);
   pointer-events: none;
+  min-width: 70px;
+  min-height: 26px;
 }
 
 .rec {
@@ -113,6 +119,7 @@
   justify-self: end;
   align-self: center;
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  margin-bottom: 10px;
 }
 
 .subtitle-decor {
@@ -122,6 +129,7 @@
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   line-height: 23px;
 }
+
 
 .section__title {
   color: var(--section-title-color);
@@ -133,20 +141,21 @@
 .section__why {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 20px;
+  gap: 15px;
   padding: 60px 20px;
+  padding-top: 18px;
 }
 
 .cards {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 5px;
 }
 
 .card__text {
   color: var(--text-color);
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
-  line-height: 23px;
+  line-height: 23.4px;
   margin-top: 10px;
   margin-bottom: 20px;
 }
@@ -185,7 +194,7 @@
 .section__how {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 20px;
+  gap: 15px;
   padding: 60px 20px;
 }
 
@@ -193,6 +202,7 @@
   display: flex;
   flex-direction: column;
 }
+
 
 .section__how .card {
   display: flex;
@@ -225,6 +235,7 @@
   margin-right: 20px;
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   line-height: 23px;
+  padding-top: 10px;
 }
 
 .gallery__item {
@@ -295,14 +306,31 @@
     max-width: 364px;
   }
 
+  .section__title--why {
+    max-width: 236px;
+  }
+
+  .section__title--what {
+    max-width: 236px;
+  }
+
   .cards__what {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0;
 }
+
+  .cards__how {
+    max-width: 472px;
+}
+
 }
 
 @media (width < 768px) {
+  .main {
+    margin-bottom: 0;
+  }
+
   .header {
       min-height: 668px;
       padding: 10px;
@@ -312,13 +340,20 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      padding-top: 75px;
-      gap: 10px;
+      padding-top: 65px;
+      padding-right: 10px;
+      gap: 15px;
   }
 
   .header__theme-menu {
     justify-self: end;
   }
+
+  .rec {
+  position: absolute;
+  top: 10px;
+  right: 19px;
+}
 
   .decorated-zone::before {
     top: 10px;
@@ -337,41 +372,74 @@
   .subtitle {
     width: 100%;
     max-width: none;
+    margin-top: 10px;
   }
   
   .section__why,
   .section__how {
       grid-template-columns: 1fr;
       padding: 40px 10px;
+      padding-top: 0;
+  }
+
+  .card__text {
+  margin-bottom: 15px;
   }
 
   .section__what {
-    padding-right: 10px;
-    padding-left: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 0;
 }
 
   .cards__what {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 5px;
   }
 
-  .gallery__item {
-    grid-column: auto;
-    grid-row: auto;
+  .section__how {
+    margin-top: 35px;
+    margin-bottom: 0;
   }
 
-  .gallery__title {
-    margin: 10px;
+  .cards__how {
+    margin-top: 8px;
+  }
+
+  .card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5px;
+  }
+
+  .card__text--last {
+    margin-bottom: 7px;
   }
 
   .gallery {
     grid-template-columns: 1fr;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0;
+    margin-top: 0;
+    gap: 10px;
+    }
+
+  .gallery__title {
     margin: 10px;
-  }
+    margin-top: 0;
+    max-height: 24px;
+    padding-top: 0;
+    }
+
+  .gallery__item {
+    grid-column: auto;
+    grid-row: auto;
+    }
 
   .footer {
     min-height: 668px;
-    padding: 10px;
-  }
+    margin-top: 40px;
+    }
 }
