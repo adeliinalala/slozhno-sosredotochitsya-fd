@@ -62,6 +62,7 @@
   font-weight: var(--font-weight-regular);
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   cursor: pointer;
+  min-width: 70px;
 }
 
 .header__theme-menu-button:hover {
@@ -76,7 +77,6 @@
 .header__theme-menu-button_active {
   outline: 1px solid var(--active-color);
   pointer-events: none;
-  min-width: 70px;
   min-height: 26px;
 }
 
@@ -332,17 +332,17 @@
   }
 
   .header {
-      min-height: 668px;
-      padding: 10px;
+    min-height: 668px;
+    padding: 10px;
   }
 
   .header__theme-menu-list {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      padding-top: 65px;
-      padding-right: 10px;
-      gap: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 65px;
+    padding-right: 10px;
+    gap: 15px;
   }
 
   .header__theme-menu {
@@ -350,9 +350,8 @@
   }
 
   .rec {
-  position: absolute;
-  top: 10px;
-  right: 19px;
+    top: 10px;
+    right: 19px;
 }
 
   .decorated-zone::before {
@@ -377,20 +376,20 @@
   
   .section__why,
   .section__how {
-      grid-template-columns: 1fr;
-      padding: 40px 10px;
-      padding-top: 0;
+    grid-template-columns: 1fr;
+    padding: 40px 10px;
+    padding-top: 0;
   }
 
   .card__text {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
   }
 
   .section__what {
     margin-left: 10px;
     margin-right: 10px;
     padding-top: 0;
-}
+  }
 
   .cards__what {
     display: flex;
@@ -408,9 +407,9 @@
   }
 
   .card__content {
-  display: flex;
-  flex-direction: column;
-  gap: 3.5px;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5px;
   }
 
   .card__text--last {
@@ -424,22 +423,22 @@
     margin-bottom: 0;
     margin-top: 0;
     gap: 10px;
-    }
+  }
 
   .gallery__title {
     margin: 10px;
     margin-top: 0;
     max-height: 24px;
     padding-top: 0;
-    }
+  }
 
   .gallery__item {
     grid-column: auto;
     grid-row: auto;
-    }
+  }
 
   .footer {
     min-height: 668px;
     margin-top: 40px;
-    }
+  }
 }
